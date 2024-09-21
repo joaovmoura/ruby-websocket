@@ -63,6 +63,21 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     amq-protocol (2.3.2)
+    anycable (1.5.1)
+      anycable-core (= 1.5.1)
+      grpc (~> 1.53)
+    anycable-core (1.5.1)
+      anyway_config (~> 2.2)
+      google-protobuf (~> 3.25)
+    anycable-rails (1.5.3)
+      anycable (~> 1.5.0)
+      anycable-rails-core (= 1.5.3)
+    anycable-rails-core (1.5.3)
+      actioncable (>= 6.0, < 8)
+      anycable-core (~> 1.5.0)
+      globalid
+    anyway_config (2.6.4)
+      ruby-next-core (~> 1.0)
     base64 (0.2.0)
     bindex (0.8.1)
     bootsnap (1.18.4)
@@ -89,6 +104,12 @@ GEM
     ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    google-protobuf (3.25.5-x86_64-linux)
+    googleapis-common-protos-types (1.16.0)
+      google-protobuf (>= 3.18, < 5.a)
+    grpc (1.66.0-x86_64-linux)
+      google-protobuf (>= 3.25, < 5.0)
+      googleapis-common-protos-types (~> 1.0)
     i18n (1.14.5)
       concurrent-ruby (~> 1.0)
     jbuilder (2.12.0)
@@ -174,6 +195,7 @@ GEM
       connection_pool
     regexp_parser (2.9.2)
     rexml (3.3.7)
+    ruby-next-core (1.0.3)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -238,6 +260,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  anycable-rails
   bootsnap (>= 1.4.4)
   bunny
   byebug
@@ -247,7 +270,7 @@ DEPENDENCIES
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.7, >= 6.1.7.8)
-  redis
+  redis (>= 4.0)
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring

@@ -1,0 +1,5 @@
+web: bin/rails s
+# ...
+ws: anycable-go
+# When using gRPC
+rpc: bundle exec anycableanycable: bundle exec anycable
