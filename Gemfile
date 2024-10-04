@@ -53,4 +53,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bunny' # RabbitMQ client
 
 gem "anycable-rails"
-gem "redis", ">= 4.0"
+gem "redis"
